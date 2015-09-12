@@ -1,0 +1,114 @@
+
+
+#bottom_panel{
+	
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;   
+	-webkit-box-align: center;
+	
+}
+
+
+
+
+
+#main_panel{
+	border: 1px solid #808080;
+	background:#FFFFFF;
+	margin-top: 100px;
+	margin-bottom: 30px;
+	width:1000px;
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-shadow: #808080 0px 0px 5px;
+
+}
+
+
+#top_header{
+	
+	padding: 20px;
+	text-align: center;
+}
+
+
+
+
+#second_panel{
+	display:-webkit-box;
+	
+	-webkit-box-orient:horizontal;
+	background: #FFFFFF;
+}
+
+#main_section{
+	
+	-webkit-box-flex:1;
+	min-width:300px;
+	max-width:820px;
+	margin: 20px;
+	padding-left: 100px;
+	padding-right:70px;
+	padding-bottom: 50px;
+}
+
+#side_info{
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	width: 220px;
+	float: right;
+	
+	/*margin: 20px 20px;*/
+
+	background: #FFFFFF;
+
+}
+
+
+#more{
+	padding-top:15px;
+	font:  15px Tahoma;
+	text-align:right;
+}
+
+#detail_skill{
+	
+	font:  15px Tahoma;
+	line-height: 200%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.plain_para{
+	font:  15px Tahoma;
+	line-height: 150%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.h3:link{
+	text-decoration: none;
+	font: bold 15px Tahoma;
+
+	color:black;
+}
+
+.h3:visited{
+	text-decoration: none;
+	font: bold 15px Tahoma;
+
+	color:black;
+}
+
+.h3:hover{
+	text-decoration: none;
+	font: bold 15px Tahoma;
+
+	color: #0000CC
+}
+
+
+

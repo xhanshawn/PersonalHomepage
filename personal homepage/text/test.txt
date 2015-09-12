@@ -1,0 +1,104 @@
+Title header
+navigation bar
+body
+
+footer
+
+
+
+CSS:
+
+Id:    #id
+
+Class:    .class
+
+
+Attribute:    p[attributename OR atribute=""]
+^=   beginning      $=   end       *=  wherever
+
+
+
+
+
+p:nth-child(3){color:green;}
+p:nth-child(odd){color:green;}
+
+
+
+*{color}    //all blue
+
+:not(.bucky){color:red;}   //  negation pseudo-class
+
+
+
+
+parent > child {}   //setup all children
+
+
+
+//CSS3 selectors
+
+
+
+
+p.bucky + p {}     //set up all follows of bucky class
+
+
+
+p.bucky ~ p{}     //set up all follows of bucky class, not immediately
+
+
+
+
+//    -webkit-box  
+
+-webkit-box-orient: horizontal OR vertical;
+-webkit-box-direction: reverse;
+-webkit-box-ordinal-group:  number of position;   //custom positions
+-webkit-box-pack: end;     //align to right
+-webkit-box-align: ;    //align vertically  eg:  center strech
+-webkit-border-radius:25px;    // rounded corner
+-webkit-box-shadow:rgb(110,110,110)  8px  8px 8px;  //  shadow color; down ; right; blur; inset;
+
+
+text-shadow   //give text shadow
+
+
+background: -webkit-linear-gradient(top,black,white);
+
+
+
+-webkit-transform:     scale(x,y);     rotate(x deg);    translate(x,y);
+
+
+-webkit-transition: -webkit-transform 2s; background 2s; or other attributes; 
+opacity: float number;      
+
+
+
+font:
+
+line-height: 100%;
+
+
+
+
+JAVASCRIPT:
+
+
+function getStuff(){
+
+document.querySelector('#idname').onclick=xxx;
+}
+function xxx(){
+
+	alert('warning')
+
+}
+
+
+
+window.onload=getStuff;
+
+
+querySelectorAll

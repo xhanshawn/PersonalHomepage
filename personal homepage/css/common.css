@@ -1,0 +1,90 @@
+*{
+	margin: 0px;
+	padding: 0px; 
+	
+}
+
+
+h1{
+	font: bold 40px Tahoma;
+}
+
+h2{
+	font: bold 30px Tahoma;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+h3{
+
+	font: bold 15px Tahoma;
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+}
+
+ul{
+	font: bold 15px Tahoma;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	line-height:200%;
+	padding-left: 20px;
+}
+
+
+/*--make it compatible for every browser */
+header, section ,footer ,aside , nav, article{
+
+	display:block;
+}
+
+
+body{
+	
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	background:#F4F4F4;
+	
+}
+
+#main_footer{
+
+	line-height: 200%;
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 20px;
+	background:#F4F4F4;
+}
+
+.link:link{
+	
+	text-decoration: none;
+	color: black;
+}
+
+.link:visited{
+	text-decoration: none;
+	color: black;
+}
+
+.link:hover{
+	text-decoration: none;
+	color: #0000CC;
+}
+
+
+.nav_link:link{
+	
+	text-decoration: none;
+	
+	color: #E0E0E0;
+}
+
+.nav_link:visited{
+	text-decoration: none;
+	color: #E0E0E0;
+}
+
+.nav_link:hover{
+	color: #FFFFFF;
+}
