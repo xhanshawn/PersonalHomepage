@@ -1,0 +1,3 @@
+I am a current enrolled student who is pursuing Master of Science degree in Electrical and Computer Engineering (ECE) at Worcester Polytechnic Institute. I have taken both ECE courses and Computer Science (CS) courses mainly including the Computer Hardware and Software Engineering. Currently, my objective is to get a opportunity of summer internship in Software Engineering and Computer Engineering. 
+
+During the first year of my graduate study, I finished several projects including C++ programming, Java programming and simple game design. Now I am cooperating with my partner to develop a new Android application (App) development. I am joining a team in my Object-Oriented course to design a software about making flight reservation online.

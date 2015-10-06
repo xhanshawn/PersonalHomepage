@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8"  />
+	<title>Xu Han's personal page</title> 
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css\common.css"> 
+	<link rel="stylesheet" href="css\top_bar.css">
+	<link rel="stylesheet" href="css\intro.css">
+</head>
+<script type="text/javascript">
+
+var url_base = "http://users.wpi.edu/~xhan";
+$(window).load(function(){
+	readIntroduction();
+});
+
+function readIntroduction() {
+
+	
+	$.ajax({
+        url : url_base + "/text/introduction.txt",
+        dataType: "text",
+        success : function (data) {
+        	var content = data.replace(/[|&;$%@"<>+,]/g, "");
+
+        	while(content.search(/\n/g) > -1){
+        		var new_p = content.substring(0, content.search(/\n/g));
+        		var p = document.createElement('p');
+        		p.className = 'plain_para';
+        		p.innerHTML = new_p;
+        		$('#introduction').append(p);
+        		content = content.substring(content.search('\n') + 1, content.length);
+
+        	}
+        	$('#intro_p').html(content);
+        }
+    });
+	
+}
+
+</script>
+<body>
+
+	<div id="bottom_panel">
+			<!--   top_bar-->
+		<div id="top_bar">
+		</div>	
+		
+		
+		<!--     main_panel  -->
+		<div id="main_panel">
+		<header>
+				<h1>Introduction</h1>
+		</header>
+		
+		<div id="introduction">
+		<header>
+				<h2>Introduction</h2>
+		</header>
+		
+			<p class="plain_para"></p>
+			
+		
+		</div>
+
+		
+		
+		
+		<div id="contact_info">
+		
+		<header>
+			<h2>Contact Information</h2>
+			
+			
+		</header>
+		
+			<h3>Personal information:<h3>
+			<p class="plain_para">Xu Han</p>
+			<p class="plain_para"> 
+			32 Dayton Street Apt2<br>
+			Worcester, MA 01609
+			United States</P>
+			<p class="plain_para">Tel: +1-(508)-353-5209</p>
+			<p class="plain_para">Email: <a class="link" href="mailto:xhan@wpi.edu">xhan@wpi.edu</a></p>
+			<p class="plain_para">Personal homepage: <a class="link" href="mailto:xhan@wpi.edu">users.wpi.edu/~xhan</a></p>
+			
+			<h3>Social Networks:<h3>
+			<p class="plain_para">LinkedIn: <a class="link" href="www.linkedin.com/in/xhanshawn">www.linkedin.com/in/xhanshawn</a></p>
+			<p class="plain_para">FaceBook: <a class="link" href="https://www.facebook.com/profile.php?id=100006425761916">FaceBook</a></p>
+ 
+		</div>
+		
+		</div>
+	
+	
+	
+	
+	
+	
+		<footer id="main_footer">
+		</footer>
+	
+	</div>
+</body>
+</html>

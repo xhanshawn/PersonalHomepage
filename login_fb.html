@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+
+<header>
+	<meta charset="utf-8"  />
+	<title>Login</title>
+
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css\common.css"> 
+	<link rel="stylesheet" href="css\top_bar.css">
+	<link rel="stylesheet" href="css\others.css">
+</header>
+
+
+
+<body>
+
+	<script>
+  	window.fbAsyncInit = function() {
+    	FB.init({
+      		appId      : '1606271502972740',
+      		xfbml      : true,
+      		version    : 'v2.4'
+    	});
+  	};
+
+  	(function(d, s, id){
+    	var js, fjs = d.getElementsByTagName(s)[0];
+    	if (d.getElementById(id)) {return;}
+    	js = d.createElement(s); js.id = id;
+    	js.src = "//connect.facebook.net/en_US/sdk.js";
+    	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+  	var url = "https://www.facebook.com/dialog/oauth?client_id=1606271502972740&redirect_uri=http://"
+  	+"users.wpi.edu/~xhan/login_fb.html&response_type=token";
+
+	function login(){
+
+		window.location.replace(url);
+		alert(window.location.href);
+	}
+	
+	function verifyByMAC(){
+		$.ajax({
+        url : url_base + "/text/mac.txt",
+        dataType: "text",
+        success : function (data) {
+        	var mac = data.replace(/[|&;$%@"<>+,]/g, "");
+        }
+    });
+	}
+	</script>
+
+	<div id="bottom_panel">
+			<!--   top_bar-->
+		<h3>Login function is only for myself to edit all posts and texts. So it is not open for visitors
+		</h3>
+		<br/>
+		<button onclick="login()" type="button">login by FB</button>
+		<p>code:</p><input id="code"></input>
+	</div>
+
+</body>
+
+
+</html>

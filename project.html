@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8"  />
+	<title>Project</title> 
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/common.js"></script>
+	<link rel="stylesheet" href="css\common.css"> 
+	<link rel="stylesheet" href="css\top_bar.css">
+	<link rel="stylesheet" href="css\project.css">
+</head>
+<body>
+	<script type="text/javascript">
+		var url_base = "http://users.wpi.edu/~xhan";
+
+		$(window).load(function(){
+			addProjects();
+		});
+		function addProjects(){
+	
+ 			$.ajax({
+        		url : url_base + "/text/projects.txt",
+       			dataType: "text",
+        		success : function (data) {
+        			var str = data.replace(/[|&;$%@"<>+,]/g, "");
+        			var count = 0;
+        			while(str.length > 0 && str.search("PROJECT: ") != -1) {
+        				var p1 = str.search("PROJECT: ") + "PROJECT: ".length;
+        				var p2 = str.search("DESCRIPTION: ");
+        				var pro_title = document.createElement('h2');
+    					pro_title.innerHTML = str.substring(p1, p2).replace(/\n/g , "<br><br>");
+    					$('#projects').append(pro_title);
+    					str = str.substring(p2 + "DESCRIPTION: ".length, str.length);
+
+    					var des = document.createElement('p');
+    					var p3 = str.search("PROJECT: ");
+
+    					if(p3 == -1) p3 = str.length;
+    					des.innerHTML = str.substring(0, p3).replace(/\n/g , "<br><br>");
+
+    					des.className = "plain_para";
+    					$('#projects').append(des);
+    					str = str.substring(p3, str.length);
+    					var links = document.createElement('div');
+    					links.id = "pro" + count;
+    					$('#projects').append(links);
+    					count++; 
+    				}
+
+    				addLinks();
+        		}
+    		});
+		}
+
+
+		function addLinks(){
+
+			var p0 = document.createElement('p');
+			p0.className = "plain_para";
+
+			var use_cases0 = document.createElement('a');
+			use_cases0.className = "link"
+			var uref0 = "http://users.wpi.edu/~xhan/others/UseCases.pdf";
+			use_cases0.href = uref0;
+			use_cases0.innerHTML = 'Use cases';
+			p0.appendChild(use_cases0);
+
+			var git0 = document.createElement('a');
+			git0.className = "link"
+			var gref0 = "https://github.com/xhanshawn/JavaPrac/tree/cs509_server";
+			git0.href = gref0;
+			git0.innerHTML = 'GitHub code sample:' + gref0;
+			p0.appendChild(git0);
+			$('#pro0').append(p0);
+
+
+			var p1 = document.createElement('p');
+			p1.className = "plain_para";
+
+			var git1 = document.createElement('a');
+			git1.className = "link"
+			var git1ref = "https://github.com/xhanshawn/Android/tree/master";
+			git1.href = git1ref;
+			git1.innerHTML = "Android: " + git1ref;
+			p1.appendChild(git1);
+
+			var gitB1 = document.createElement('a');
+			gitB1.className = "link"
+			var gitB1ref = "https://github.com/xhanshawn/RubyOnRails/tree/Latalk_server";
+			gitB1.href = gitB1ref;
+			gitB1.innerHTML = "Ruby on Rails: " + gitB1ref;
+			p1.appendChild(gitB1);
+
+			var gitN1 = document.createElement('a');
+			gitN1.className = "link"
+			var gitN1ref = "https://github.com/xhanshawn/JavaPrac/tree/NotiArrayList";
+			gitN1.href = gitN1ref;
+			gitN1.innerHTML = "NotiArrayList: " + gitN1ref;
+			p1.appendChild(gitN1);
+
+			$('#pro1').append(p1);
+
+
+
+			var p2 = document.createElement('p');
+			p2.className = "plain_para";
+
+			var glink2 = document.createElement('a');
+			glink2.className = "link"
+			var gref2 = "http://users.wpi.edu/~xhan/others/SnakeGameV1.1.jar";
+			glink2.href = gref2;
+			glink2.innerHTML = 'Snake Game: sample';
+			p2.appendChild(glink2);
+
+			var clink2 = document.createElement('a');
+			clink2.className = "link"
+			var cref2 = "https://github.com/xhanshawn/JavaPrac/tree/SnakeGame";
+			clink2.href = cref2;
+			clink2.innerHTML = 'Code sample: ' + cref2;
+			p2.appendChild(clink2);
+			$('#pro2').append(p2);
+
+			$('#pro3').append("<br><br><br>");
+			$('.link').after('<br/>');
+		}
+	</script>
+
+	<div id="bottom_panel">
+			<!--   top_bar-->
+		<div id="top_bar">
+		</div>	
+		
+		
+		<!--     main_panel  -->
+		<div id="main_panel" >
+		<header>
+		
+				<h1>Project</h1>
+				
+		</header>
+		
+        <div id="projects">
+        </div>            
+			<br><br><br>
+		</div>
+	
+		<footer id="main_footer">
+		</footer>
+
+	</div>
+</body>
+</html>
