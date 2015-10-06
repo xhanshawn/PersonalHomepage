@@ -1,0 +1,89 @@
+*{
+	margin: 0px;
+	padding: 0px; 
+	
+}
+
+
+header, section ,footer ,aside , nav, article{
+
+	display:block;
+}
+
+
+body{
+	
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	background:#F4F4F4;
+	
+}
+
+a{
+	color: #0000CC;
+}
+h1{
+	font: bold 30px Tahoma;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align:center;
+}
+h2{
+
+	font: bold 15px Tahoma;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+#bottom_panel{
+	
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;   
+	-webkit-box-align: center;
+	
+}
+
+
+#main_panel{
+	border: 1px solid #808080;
+	background:#FFFFFF;
+	margin-top: 100px;
+	margin-bottom: 30px;
+	width:1000px;
+	height:1000px;
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: top;
+	-webkit-box-shadow: #808080 0px 0px 5px;
+
+}
+
+#code_samples{
+	padding-left: 200px;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+
+}
+
+#runnable{
+	padding-left: 200px;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+
+}
+#others{
+	padding-left: 200px;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+
+}
+
+
+.plain_para{
+	font:  15px Tahoma;
+	line-height: 150%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
