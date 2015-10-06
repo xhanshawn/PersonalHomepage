@@ -36,23 +36,20 @@
 	}(document, 'script', 'facebook-jssdk'));
 
   	var url = "https://www.facebook.com/dialog/oauth?client_id=1606271502972740&redirect_uri=http://"
-  	+"users.wpi.edu/~xhan/login_fb.html&response_type=token";
+  	+"users.wpi.edu/~xhan/login_fb.html";
 
 	function login(){
 
+		// var new_window = 
 		window.location.replace(url);
 		alert(window.location.href);
+		// window.open(url, 'name', 'height=500,width=600');
+		// $(new_window.document).ready(function() {
+		// });
+		
+		// if(window.focus) new_window.focus();
 	}
 	
-	function verifyByMAC(){
-		$.ajax({
-        url : url_base + "/text/mac.txt",
-        dataType: "text",
-        success : function (data) {
-        	var mac = data.replace(/[|&;$%@"<>+,]/g, "");
-        }
-    });
-	}
 	</script>
 
 	<div id="bottom_panel">
@@ -61,7 +58,6 @@
 		</h3>
 		<br/>
 		<button onclick="login()" type="button">login by FB</button>
-		<p>code:</p><input id="code"></input>
 	</div>
 
 </body>

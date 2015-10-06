@@ -54,47 +54,6 @@ h3{
 }
 
 
-#top_bar{
-	width:100%;
-	min-width:200px;
-	
-	position: fixed;
-	-webkit-box-orient: vertical;
-	-webkit-box-flex: 1;
-
-}
-
-
-
-
-
-#top_menu{
-	min-width:300px;
-	text-align: center;
-	background: #202020;
-	-webkit-box-shadow: black  0px  1px  2px;
-	
-	-webkit-transition: -webkit-transform 2s;
-}
-
-
-#top_menu li{
-	width:120px;
-	display: inline-block;
-	list-style: none;
-	padding: 16px;
-	font:  bold 20px Tahoma ;
-	color: #E0E0E0;
-	-webkit-transition: background 0.5s;
-	
-}
-
-#top_menu li:hover{
-	background:#404040;
-	color: #FFFFFF;
-}
-
-
 
 #main_panel{
 	border: 1px solid #808080;

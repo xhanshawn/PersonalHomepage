@@ -1,0 +1,280 @@
+@import url(http://fonts.googleapis.com/css?family=Kalam:400);
+
+g.math text {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  dominant-baseline: alphabetic;
+}
+
+body {
+	margin: 0;
+}
+
+g.math {
+	pointer-events: all;
+}
+
+#menu {
+  float: left;
+  margin-top: 21px;
+  margin-left: 30px;
+}
+
+#menu .menu-item, #prev, #next {
+	font-family: Lato;
+	text-decoration: none;
+  color: gray;
+  font-size: 15px;
+  display: block;
+  padding: 8px 8px;
+  border-radius: 4px;
+  border: 1px rgba(0,0,0,0) solid;
+  cursor: pointer;
+}
+
+#prev, #next {
+	display: inline;
+	cursor: default;
+}
+
+#menu .menu-item:hover {
+	border: silver 1px solid;
+	color: #666;
+	cursor: pointer;
+}
+
+#prev.active:hover, #next.active:hover {
+	border: silver 1px solid;
+	cursor: pointer;
+}
+
+#menu .menu-item.active, #prev.active, #next.active {
+	margin: 0px;
+  color: #85C042;
+}
+
+div.middle {
+  margin: 0;
+  margin-bottom: 40px;
+  background-color: #84BF41;
+  border-bottom: rgba(69, 70, 67, 0.5) 1px solid;
+  padding: 7px 8px 0px 10px;
+}
+
+h1 a {
+	text-decoration: none;
+	color: white;
+}
+
+div.middle h1 {
+  font-weight: 300;
+  font-size: 22px;
+  color: #4D4D4C;
+  line-height: 25px;
+  font-family: 'Lato', helvetica, arial, sans-serif;
+  margin-top: 0px;
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+h1 img {
+	padding-right: 3px;
+  vertical-align: -6px;
+  width: 40px;
+}
+
+h2 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+p.tutorial-instructions {
+	font-size: 19px;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #555;
+	font-weight: 300;
+	margin-top: 1em;
+}
+
+.tutorial {
+	margin-bottom: 3em;
+}
+
+.tutorial .choice {
+	margin: 10px 0;
+}
+
+#navs {
+	clear: both;
+	text-align: center;
+	width: 500px;
+}
+
+#outer {
+  margin: auto;
+  width: 480px;
+  padding: 0 10px;
+}
+
+#content {
+	width: 550px;
+	margin: auto;
+	float: left;
+}
+
+.interactive {
+  cursor: pointer;
+}
+
+.jspsych-display-element {
+	height: 768px;
+	width: 1024px;
+}
+
+#jspsych_target {
+  text-align: center;
+  color: #444;
+}
+
+.instructions {
+	margin: auto;
+	text-align: left;
+	font-size: 18px;
+}
+
+.response .inner {
+	padding: 0 30px;
+}
+
+.response span.eqls {
+	font-family: 'Crimson Text';
+	font-size: 40px;
+	vertical-align: middle;
+}
+
+.response span.x {
+	font-family: 'Crimson Text Italics';
+	font-size: 40px;
+	vertical-align: middle;
+}
+
+.response .input-group-outer {
+	font-size: 40px;
+	font-family: 'Crimson Text';
+	width: 370px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.response input {
+	font-size: 30px;
+	height: 60px;
+}
+
+.response button {
+	height: 60px;
+	font-family: Lato;
+}
+
+.solution, .labeled-box {
+	width: 500px;
+	margin: auto;
+	border: 1px solid silver;
+	/*height: 90px;*/
+	height: 110px;
+	border-radius: 4px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	text-align: left;
+	position: relative;
+}
+
+div.solution {
+	float: right;
+	width: 45%;
+	margin: 20px auto;
+	margin-top: 150px;
+}
+
+.labeled-box {
+	height: 110px;
+}
+
+.labeled-box.response {
+	height: auto;
+	padding: 30px 0;
+}
+
+.solution span, .labeled-box span.mylabel {
+	font-size: 14px;
+	position: relative;
+	top: -12px;
+	color: gray;
+	background: white;
+	display: inline-block;
+	padding: 0px 12px;
+	height: 30px;
+	margin-left: 12px;
+	position: absolute;
+}
+
+div.choices {
+	width: 45%;
+	float: left;
+}
+
+.choice svg {
+	border: 1px solid silver;
+	border-radius: 4px;
+	background: #eee;
+}
+
+.animation {
+	width: 100%;
+	height: 100%;
+}
+
+.choice {
+	height: 120px;
+	width: 500px;
+	margin: 20px auto;
+	position: relative;
+}
+
+.choice2 {
+	height: 250px;
+	width: 500px;
+	margin: 20px auto;
+	position: relative;
+	border: 1px solid silver;
+}
+
+.choice span.label, .choice2 span.label {
+	left: 1px;
+	text-align: center;
+	width: 120px;
+	height: 100%;
+	background: rgba(0,0,0,0.15);
+	top: 1px;
+	position: absolute;
+	border-radius: 3px 0 0 3px;
+	font-size: 20px;
+	font-family: Lato;
+	color: black;
+	display: inline-block;
+	line-height: 120px;
+	font-style: italic;
+}
+
+.choice span.label.light, .choice2 span.label.light {
+	background: none;
+	color: #85C042;
+}
